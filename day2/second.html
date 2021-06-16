@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="second.css">
+    <title>my first web page</title>
+</head>
+
+<body>
+    <div class="head">
+        <h1>My First web page</h1>
+    </div>
+    <div class="head2">
+        <h2>What this is</h2>
+    </div>
+    <em>Welcome to my first webpage</em>. I created this webpage with assistance of a webpage editor.Just my little
+    text editor and a keen <strong>understanding of HTML</strong>
+    <div class="head2">
+        <h2> Why this is</h2>
+    </div>
+    <ul>
+        <li> To learn HTML</li>
+        <li>List element</li>
+
+        <ol>
+            <li>Home</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>Form</li>
+        </ol>
+
+        <li>Here i have created ordered and unordered list</li>
+    </ul>
+    <div class="head2">
+        <h2> ZeusLearning.com</h2>
+    </div>
+    <a href="https://www.zeuslearning.com/" target="_blank">This link will open zeuslearning.com in new tab</a>
+    <div class="head2">
+        <h2> On click of the following image navigate to Google.com</h2>
+    </div>
+    <a href="https://www.google.com/?&hl=en"><img src="gog.png" alt="google.com"></a>
+    <h3>Some random table</h3>
+    <table>
+        <tr>
+            <td>Row 1,cell 1</td>
+            <td>Row 1,cell 2</td>
+            <td>Row 1,cell 3</td>
+        <tr>
+        <tr>
+            <td>Row 2,cell 1</td>
+            <td>Row 2,cell 2</td>
+            <td>Row 2,cell 3</td>
+        <tr>
+        <tr>
+            <td>Row 3,cell 1</td>
+            <td>Row 3,cell 2</td>
+            <td>Row 3,cell 3</td>
+        <tr>
+        <tr>
+            <td>Row 4,cell 1</td>
+            <td>Row 4,cell 2</td>
+            <td>Row 4,cell 3</td>
+        <tr>
+    </table>
+    <h3>Some Random form</h3>
+    <Strong>Note: </Strong>It looks the part but ,wont do a anything
+    <form name="myform" onsubmit=" return validate(this)" method="POST">
+        <p>Name:</p>
+        <input type="text" name="text" id="text">
+        <p>Comments:</p>
+        <textarea rows="10" cols="30" name="com" id="com" placeholder="Your comments"></textarea>
+        <p>Are you:</p>
+        <input type="radio" id="Male" name="male" value="1"><label>Male</label><br><br>
+        <input type="radio" id="Female" name="female" value="0"><label>Female</label>
+        <br><br>
+        <input type="submit" value="Submit query">
+    </form>
+
+
+</body>
+<script>
+    function validate(form) {
+        let name = form.text.value;
+        let com = form.com.value
+        let male = form.male.value
+        let female = form.female.value
+
+        if (name == "") {
+            alert("All fields are compulsary")
+            document.getElementById("text").focus();
+        } else if (com == "") {
+            alert("All fields are compulsary")
+            document.getElementById("com").focus();
+        } else if (document.getElementById("Male").checked == false && document.getElementById("Female").checked == false) {
+            alert("All fields are compulsary")
+            document.getElementById("Male").focus();
+        } else {
+            alert("all done")
+        }
+        return false
+
+    }
+</script>
+
+</html>
