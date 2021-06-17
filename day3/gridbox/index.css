@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 0.5fr 1fr 1fr ;
+    grid-template-rows: 60px 200px 200px 80px;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    grid-row:2/4
+}
+
+.content1 {
+    grid-column: 2/-1;
+    grid-row:2/2
+}
+.content2 {
+    
+}
+.content3 {
+    
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
