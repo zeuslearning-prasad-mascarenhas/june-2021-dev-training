@@ -1,0 +1,42 @@
+[
+  {
+    "title": "License for Introduction to Algebra has been assigned to your school",
+    "image": "minimize.png",
+    "color": "#FFFFEE",
+    "course": false,
+    "coursecontent": "",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Lesson 3 Practice Worksheet overdue for Amy Santiago",
+    "image": "checked.svg",
+    "color": "#FFFFFF",
+    "course": true,
+    "coursecontent": "Course: <strong>Advanced Mathematics</strong>",
+    "date": "15-Sep-2018 at 05:21 pm"
+  },
+  {
+    "title": "23 new students created",
+    "image": "minimize.png",
+    "color": "#FFFFEE",
+    "course": false,
+    "coursecontent": "",
+    "date": "14-Sep-2018 at 01:21 pm"
+  },
+  {
+    "title": "License for Basic Concepts in Geometry has been assigned to your... school",
+    "image": "minimize.png",
+    "color": "#FFFFEE",
+    "course": true,
+    "coursecontent": "Class: <strong>Basics of Algebra</strong>",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Lesson 3 Practice Worksheet overdue for Sam Diego",
+    "image": "checked.svg",
+    "color": "#FFFFFF",
+    "course": true,
+    "coursecontent": "Course: <strong>Advanced Mathematics</strong>",
+    "date": "15-Sep-2018 at 07:21 pm"
+  }
+]

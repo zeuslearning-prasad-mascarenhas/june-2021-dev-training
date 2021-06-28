@@ -19,9 +19,9 @@
 
         .dropdown-content {
             width: 315px;
-            height: 582px;
-            right: 100%;
-            display: none;
+            max-height: 582px;
+            right: 5px;
+            visibility: hidden;
             position: absolute;
             background-color: #FFFFFF;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -136,10 +136,57 @@
 
         .showall .vl {
             width: 0px;
-            height: 18px;
+            height: 30px;
             border: 1px solid #0000001f;
             background-color: #0000001f;
             align-self: center;
+        }
+
+        .dropdown-content .scrollable {}
+
+        .scrollable .alert-content {
+            padding-top: 16px;
+            padding-left: 8px;
+            padding-right: 8px;
+            min-height: 91px;
+            border-bottom: 0.1px solid lightgray;
+        }
+
+        .scrollable .alert-content .box {
+            display: flex;
+            margin-top: 8px;
+        }
+
+        .scrollable .alert-content .box:first-child {
+
+            margin-top: 0px;
+        }
+
+
+        .alert-content .box strong {
+            font-size: 14px;
+            width: 260px;
+        }
+
+        .alert-content .box span {
+            color: #6E6E6E
+        }
+
+        .alert-content .box img {
+            width: 15px;
+            height: 18px;
+            margin-left: auto;
+
+        }
+
+        .alert-content .box:last-child span {
+            margin-left: auto;
+            font-size: 12px;
+        }
+
+        .alert-content .box span strong {
+            font-size: 12px;
+            color: black;
         }
     </style>
 </head>
@@ -151,14 +198,34 @@
                     src="quantum_screen_assets/icons/logo used in header.svg"></a>
             <div class="d-flex flex-row order-2 order-lg-3" style="margin-top: auto;">
                 <ul class="navbar-nav flex-row noncollapse">
-                    <div class="dropdown">
+
+                    <!-- Check this part -->
+                    <div class="dropdown" onclick="a.show('alert')">
 
                         <li class="navbar-item" style="height: 50px;">
                             <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/alerts.svg"
-                                    class="dropbtn" onmousemove="myFunction()"></a>
+                                    class="dropbtn"></a>
                             <span class="badge badge-light">5</span>
                         </li>
-                        <div id="myDropdown" class="dropdown-content">
+                        <div id="alert" class="dropdown-content">
+                            <div id="alertdata" class="scrollable"></div>
+                            <div class="showall">
+                                <span>show all</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Till here -->
+
+
+                    <div class="dropdown" onmouseover="a.show('notify')" onmouseout="a.hide('notify')">
+
+                        <li class="navbar-item" style="height: 50px;">
+                            <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/announcements.svg"
+                                    class="dropbtn"></a>
+                            <span class="badge badge-light">5</span>
+                        </li>
+                        <div id="notify" name="a" class="dropdown-content">
                             <div class="scroll">
                                 <div class="cards">
                                     <div class="name">
@@ -242,10 +309,6 @@
 
                         </div>
                     </div>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/announcements.svg"></a>
-                        <span class="badge badge-light">5</span>
-                    </li>
                     <li class="navbar-item" style="align-self: center;">
                         <a href="#" class="nav-link"><img src="img/face.png" class="face"></a>
                         <span class="badge badge-light bb">5</span>
@@ -278,35 +341,57 @@
             </div>
         </nav>
     </div>
-    <div id="myDropdown" class="dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-    </div>
 
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            // console.log("hello")
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+    </div>
+    <!-- for hover logic -->
+    <script type="text/javascript">
+        a = {
+            show: function (elem) {
+                document.getElementById(elem).style.visibility = 'visible';
+            },
+            hide: function (elem) {
+                document.getElementById(elem).style.visibility = 'hidden';
             }
         }
     </script>
+    <script>
+        fetch("json/alert.json").then(function (response) {
+            return response.json()
+        }).then(function (data) {
+            appendData(data);
+        }).catch(function (err) {
+            console.log(`error + ${err}`)
+        })
+        function appendData(data) {
+            let mainContainer = document.getElementById("alertdata");
+            for (let i = 0; i < data.length; i++) {
+                let div = document.createElement("div");
+                div.style.backgroundColor = data[i].color
+                div.className = "alert-content"
+                let first = document.createElement("div");
+                first.className = "box"
+                first.innerHTML = `<strong>${data[i].title}</strong> <img src="img/${data[i].image}">`
+                div.appendChild(first)
+                if (data[i].course) {
+                    let second = document.createElement("div")
+                    second.className = "box"
+                    let temp = document.createElement("span")
+                    temp.style.cssText = "font-size:12px;margin-right:auto;margin-left:0px"
+                    temp.innerHTML = data[i].coursecontent
+                    second.appendChild(temp);
+                    div.appendChild(second)
+
+                }
+                let third = document.createElement("div");
+                third.className = "box"
+                third.innerHTML = `<span>${data[i].date}</span>`
+
+                div.appendChild(third)
+                mainContainer.appendChild(div);
+            }
+        }
+    </script
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
