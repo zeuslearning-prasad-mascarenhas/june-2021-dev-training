@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/big.css">
+    <title>Dashboard</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            width: 315px;
+            height: 582px;
+            right: 100%;
+            display: none;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .dropdown-content .scroll {
+            height: 534px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .cards {
+            width: 315px;
+            min-height: 114px;
+            display: flex;
+            flex-direction: column;
+            color: black;
+        }
+
+        .cards .name {
+            display: flex;
+            margin-top: 16px;
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .name span {
+            color: black !important;
+        }
+
+        .cards .name img {
+
+            margin-left: auto;
+            width: 15px;
+            height: 18px;
+
+        }
+
+        .cards .message {
+            margin-top: 8px;
+            margin-left: 8px;
+            margin-right: 8px;
+            width: 254px;
+            overflow-y: auto;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        .cards .files {
+            margin-top: 8px;
+            margin-left: 8px;
+            font-size: 12px;
+            display: flex;
+            margin-right: 8px;
+
+        }
+
+        .cards .files img {
+            width: 6px;
+            height: 13px;
+            margin-right: 4px;
+        }
+
+        .cards .files span {
+            font-size: 12px;
+            color: #6E6E6E;
+        }
+
+        .cards .date {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .cards .course {
+            font-size: 12px;
+            color: #6E6E6E;
+            margin-left: 8px;
+            margin-top: 8px;
+            margin-right: 8px;
+        }
+
+        .dropdown-content .cards {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown .cards:hover {}
+
+        .show {
+            display: block;
+        }
+
+        .showall {
+
+            width: 315px;
+            height: 48px;
+            display: flex;
+
+            text-transform: uppercase;
+            justify-content: space-evenly;
+        }
+
+        .showall span {
+            align-self: center;
+            font-size: 14px;
+        }
+
+        .showall .vl {
+            width: 0px;
+            height: 18px;
+            border: 1px solid #0000001f;
+            background-color: #0000001f;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <nav class="navbar navbar-light  navbar-expand-lg ">
+            <a href="#" class="navbar-brand" style="align-self: baseline;"><img
+                    src="quantum_screen_assets/icons/logo used in header.svg"></a>
+            <div class="d-flex flex-row order-2 order-lg-3" style="margin-top: auto;">
+                <ul class="navbar-nav flex-row noncollapse">
+                    <div class="dropdown">
+
+                        <li class="navbar-item" style="height: 50px;">
+                            <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/alerts.svg"
+                                    class="dropbtn" onmousemove="myFunction()"></a>
+                            <span class="badge badge-light">5</span>
+                        </li>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div class="scroll">
+                                <div class="cards">
+                                    <div class="name">
+                                        <span>PA:
+                                            <strong>Wilson Kumar</strong>
+                                        </span>
+                                        <img src="img/checked.svg">
+                                    </div>
+                                    <div class="message">No classes will be held on 21st Nov</div>
+                                    <div class="course" style="display: none;"></div>
+                                    <div class="files">
+                                        <img src="img/attach.png"><span class="file">2 files are attached</span><span
+                                            class="date">15-Sep-2018 at 07:21 pm</span>
+                                    </div>
+                                </div>
+                                <div class="cards" style="background-color: #FFFFEE;">
+                                    <div class="name">
+                                        <span>PA:
+                                            <strong>Samson White</strong>
+                                        </span>
+                                        <img src="img/minimize.png">
+                                    </div>
+                                    <div class="message">Guest lecture on Geometry on 20th September</div>
+                                    <div class="course" style="display: none;"></div>
+                                    <div class="files">
+                                        <img src="img/attach.png">
+                                        <span class="file">2 files are attached</span>
+                                        <span class="date">15-Sep-2018 at 07:21 pm</span>
+                                    </div>
+                                </div>
+                                <div class="cards">
+                                    <div class="name">
+                                        <span>PA: <strong>Wilson Kumar</strong>
+                                        </span>
+                                        <img src="img/checked.svg">
+                                    </div>
+                                    <div class="message">Additional course materials available on request</div>
+                                    <div class="course">Course: Mathematics 101</div>
+                                    <div class="files">
+                                        <img src="img/attach.png" style="display: none;">
+                                        <span class="file"></span>
+                                        <span class="date">15-Sep-2018 at 07:21 pm</span>
+                                    </div>
+                                </div>
+                                <div class="cards" style="background-color: #FFFFEE;">
+                                    <div class="name">
+                                        <span>PA:
+                                            <strong>Wilson Kumar</strong>
+                                        </span>
+                                        <img src="img/minimize.png">
+                                    </div>
+                                    <div class="message">No classes will be held on 25th Dec</div>
+                                    <div class="course" style="display: none;"></div>
+                                    <div class="files">
+                                        <img src="img/attach.png" style="display: none;">
+                                        <span class="file"></span>
+                                        <span class="date">15-Sep-2018 at 07:21 pm</span>
+                                    </div>
+                                </div>
+                                <div class="cards">
+                                    <div class="name">
+                                        <span>PA:
+                                            <strong>Wilson Kumar</strong>
+                                        </span>
+                                        <img src="img/minimize.png">
+                                    </div>
+                                    <div class="message">Additional course materials available on request</div>
+                                    <div class="course" style="display: none;"></div>
+                                    <div class="files">
+                                        <img src="img/attach.png" style="display: none;">
+                                        <span class="file"></span>
+                                        <span class="date">15-Sep-2018 at 07:21 pm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="showall">
+                                <span>show all</span>
+                                <div class="vl"></div>
+                                <span>CREATE NEW</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/announcements.svg"></a>
+                        <span class="badge badge-light">5</span>
+                    </li>
+                    <li class="navbar-item" style="align-self: center;">
+                        <a href="#" class="nav-link"><img src="img/face.png" class="face"></a>
+                        <span class="badge badge-light bb">5</span>
+                    </li>
+                    <button style="align-self: baseline;" class="navbar-toggler" data-toggle="collapse"
+                        data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </ul>
+
+            </div>
+            <div class="collapse navbar-collapse order-3 order-lg-2  " id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link bor"><span>Dashboard</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Content</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Users</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Reports</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Admin</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            // console.log("hello")
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

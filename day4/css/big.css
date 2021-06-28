@@ -356,7 +356,7 @@ hr {
 .navbar-expand-lg .navbar-collapse {
   margin-top: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #course {
     margin-top: 10px;
   }
