@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+    <div class="top">
+        <nav class="navbar navbar-light  navbar-expand-xl ">
+            <a href="#" class="navbar-brand" style="align-self: baseline;"><img
+                    src="../../assets/quantum_screen_assets/icons/logo used in header.svg"></a>
+            <div class="d-flex flex-row order-2 order-lg-3" style="margin-top: auto;">
+                <ul class="navbar-nav flex-row noncollapse">
+
+                    <!-- Check this part -->
+                    <div class="dropdown" (mouseover)="show(alert)" (mouseout)="hide(alert)">
+
+                        <li class="navbar-item" style="height: 50px;">
+                            <a href="#" class="nav-link"><img src="../../assets/quantum_screen_assets/icons/alerts.svg"
+                                    class="dropbtn"></a>
+                            <span class="badge badge-light" #alertnumber id="alertnumber">{{alertsize}}</span>
+                        </li>
+                        <div #alert id="alert" class="dropdown-content">
+                            <div id="alertdata" class="scrollable">
+                                <div class="alert-content" *ngFor="let data of alertjson"
+                                    style="background-color: {{data.color}}">
+                                    <div class="box">
+                                        <strong>{{data.title}}</strong> <img src="../../assets/img/{{data.image}}">
+                                    </div>
+                                    <div class="box" style="font-size:12px;margin-right:auto;margin-left:0px">
+                                        <span>{{data.coursecontent}}</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>{{data.date}}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="showall">
+                                <span>show all</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Till here -->
+
+
+                    <div class="dropdown" (mouseover)="show(notify)" (mouseout)="hide(notify)">
+
+                        <li class="navbar-item" style="height: 50px;">
+                            <a href="#" class="nav-link"><img
+                                    src="../../assets/quantum_screen_assets/icons/announcements.svg"
+                                    class="dropbtn"></a>
+                            <span class="badge badge-light">{{notifysize}}</span>
+                        </li>
+                        <div #notify id="notify" class="dropdown-content">
+                            <div class="scroll">
+                                <div class="cards" *ngFor="let data of notifyjson"
+                                    [ngStyle]="{'background-color':data.img==='checked.svg'?'#FFFFFF':'#FFFFEE'}">
+                                    <div class="name">
+                                        <span>PA:
+                                            <strong>{{data.title}}</strong>
+                                        </span>
+                                        <img src="../../assets/img/{{data.img}}">
+                                    </div>
+                                    <div class="message">{{data.content}}</div>
+                                    <div class="course">{{data.course}}</div>
+                                    <div class="files">
+                                        <img src="../../assets/img/attach.png"
+                                            [ngStyle]="{'display':data.attached===''?'none':'block'}"><span
+                                            class="file">{{data.attached}}</span><span class="date">{{data.date}}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="showall">
+                                <span>show all</span>
+                                <div class="vl"></div>
+                                <span>CREATE NEW</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <li class="navbar-item" style="align-self: center;">
+                        <a href="#" class="nav-link"><img src="../../assets/img/face.png" class="face"></a>
+                        <span class="badge badge-light bb">5</span>
+                    </li>
+                    <div class="dropdown" (mouseover)="show(navdrop)" (mouseout)="hide(navdrop)">
+                        <button style="align-self: baseline;margin-bottom: 8px;" class="navbar-toggler">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div #navdrop id="navdrop" class="dropdown-content">
+                            <div class="navdropcontent" style="color: #1F7A54;">
+                                <div class="menuoption"><span>Dashboard</span></div>
+                                <div class="menuoption">
+                                    <div class="menumainoption"><span>Content</span><img src="
+                                            ../../assets/img/down.png" (click)="opensuboption(coursesub)">
+                                    </div>
+                                    <div #coursesub id="coursesub" class="menusuboption">
+                                        <span> COURSE CATALOG</span>
+                                    </div>
+                                </div>
+                                <div class="menuoption"><span>Users</span></div>
+                                <div class="menuoption"><span>Report</span></div>
+                                <div class="menuoption"><span>Admin</span></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </ul>
+
+            </div>
+            <div class="collapse navbar-collapse order-3 order-lg-2  " id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link bor"><span>Dashboard</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Content</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Users</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Reports</span></a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link"><span>Admin</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

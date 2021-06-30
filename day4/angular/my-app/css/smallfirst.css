@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "myFirstFont";
+  src: url("../quantum_screen_assets/font/Quicksand-VariableFont_wght.ttf");
+}
+body {
+  font-family: "myFirstFont";
+}
+.main {
+  top: 0px;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 1024px; */
+  height: 798px;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+}
+.top {
+  margin-bottom: auto;
+  display: flex;
+  background-image: url("../img/image4.PNG");
+  /* width: 1024px; */
+  height: 56px;
+}
+.top > img {
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+  height: 70%;
+  align-self: center;
+}
+
+.center {
+  height: 668px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e0e1e1;
+}
+.blue {
+  width: 488px;
+  height: 4px;
+  background: #3ac7ec 0% 0% no-repeat padding-box;
+  border-radius: 2px 2px 0px 0px;
+  opacity: 1;
+}
+.form {
+  height: 583px;
+  width: 488px;
+  background-color: white;
+}
+.first {
+  display: flex;
+  margin-left: 2rem;
+}
+.first > img {
+  transform: rotate(270deg);
+
+  justify-self: flex-start;
+  align-self: center;
+  width: 17px;
+  height: 26px;
+}
+.first > h1 {
+  margin-left: 16%;
+  width: 236px;
+  height: 30px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0px;
+  color: #222222;
+  opacity: 1;
+}
+.second {
+  display: flex;
+  margin-left: 1.5rem;
+}
+.box input {
+  width: 20px;
+  height: 24px;
+  vertical-align: middle;
+  border-color: #1f7a54;
+}
+.box:nth-child(2) {
+  margin-left: 2rem;
+}
+.box span {
+  font-size: 16px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.third {
+  width: 424px;
+  height: 45px;
+  margin-left: 1.5rem;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.third select {
+  outline: 0;
+  border-width: 0 0 0.2px;
+  border-color: lightgray;
+  opacity: 1;
+  padding-bottom: 0.2rem;
+}
+.third label {
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #666666;
+  opacity: 1;
+  margin-bottom: 0.5rem;
+}
+.third select {
+  font-size: 16px;
+}
+.third option {
+  font: normal normal medium 30px/20px Quicksand;
+  letter-spacing: 0px;
+  color: #222222;
+  opacity: 1;
+  width: 68px;
+  height: 20px;
+}
+.fourth {
+  margin-left: 1.5rem;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 424px;
+  height: 48px;
+}
+.fourth input {
+  outline: 0;
+  border-width: 0 0 0.2px;
+  width: 423px;
+  height: 25px;
+  padding-bottom: 4px;
+}
+.fourth label {
+  margin-top: 5px;
+  align-self: flex-end;
+  color: #1f7a54;
+  text-transform: uppercase;
+
+  font: normal normal medium 14px/18px Quicksand;
+}
+.ff {
+  margin-top: 33px;
+}
+.pass {
+}
+.pass input {
+  background: url("quantum_screen_assets/icons/preview.svg") no-repeat;
+  background-position: right;
+}
+.fifth {
+  display: flex;
+  margin-left: 1.5rem;
+  margin-top: 25px;
+}
+.fifth span {
+  align-self: center;
+  font-size: 16px;
+  color: #1f7a54;
+}
+.fifth input {
+  width: 18px;
+  height: 24px;
+}
+.sixth {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+}
+.sixth input {
+  width: 216px;
+  height: 40px;
+  background: #3fd28b 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 5px #0000003d;
+  opacity: 1;
+  border: 0cm;
+}
+.about {
+  display: flex;
+  width: 130px;
+  height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  font-size: 14px;
+  justify-content: space-around;
+}
+.about span {
+  font: normal normal medium 14px/18px Quicksand;
+  letter-spacing: 0px;
+  color: #1f7a54;
+}
+.about .vl {
+  width: 0px;
+  height: 18px;
+  border: 1px solid #0000001f;
+  background-color: #0000001f;
+}
+.footer {
+  width: 1024px;
+  height: 40px;
+  margin-top: 16px;
+  margin-bottom: auto;
+  background-color: #e0e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.con {
+  width: 504px;
+  height: 26.02px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .vl {
+  width: 0px;
+  height: 24px;
+  border: 1px solid #0000001f;
+}
+.footer span {
+  font-size: 12px;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    width: 768px;
+    height: 40px;
+    margin-top: 16px;
+
+    background-color: #e0e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    top: 0px;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+    height: 1024px;
+    background: #eeeeee 0% 0% no-repeat padding-box;
+  }
+  .top {
+    margin-bottom: auto;
+    display: flex;
+    background-image: url("../img/image4.PNG");
+    width: 768px;
+    height: 56px;
+  }
+  .about {
+    display: flex;
+    width: 130px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 258px;
+    font-size: 14px;
+    justify-content: space-around;
+  }
+}

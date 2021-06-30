@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Wilson Kumar",
+    "content": "No classes will be held on 21st Nov",
+    "img": "checked.svg",
+    "course": "",
+    "attached": "2 files are attached",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Samson White",
+    "content": "Guest lecture on Geometry on 20th September No",
+    "img": "minimize.png",
+    "course": "",
+    "attached": "2 files are attached",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Wilson Kumar",
+    "content": "Additional course materials available on request",
+    "img": "checked.svg",
+    "course": "Course: Mathematics 101",
+    "attached": "",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Wilson Kumar",
+    "content": "No classes will be held on 25th Dec",
+    "img": "minimize.png",
+    "course": "",
+    "attached": "",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Wilson Kumar",
+    "content": "Additional course materials available on request",
+    "img": "minimize.png",
+    "course": "Course: Mathematics 101",
+    "attached": "2 files are attached",
+    "date": "15-Sep-2018 at 07:21 pm"
+  },
+  {
+    "title": "Samson White",
+    "content": "Guest lecture on Geometry on 20th September No",
+    "img": "minimize.png",
+    "course": "",
+    "attached": "2 files are attached",
+    "date": "15-Sep-2018 at 07:21 pm"
+  }
+]
