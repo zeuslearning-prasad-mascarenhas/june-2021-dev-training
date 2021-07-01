@@ -2,6 +2,7 @@ body {
   font-family: "Quicksand";
   background: #eeeeee;
 }
+
 .main {
   width: 1024px;
   margin-top: auto;
@@ -19,32 +20,39 @@ body {
   margin-right: auto;
   display: flex;
 }
+
 .section {
   width: 50%;
   display: flex;
   justify-content: center;
 }
+
 .section:first-child {
   border-bottom: #000000 solid 4px;
 }
+
 .section img {
   width: 21px;
   height: 32px;
   align-self: center;
 }
+
 .section strong {
   align-self: center;
   font-size: 24px;
   margin-left: 8px;
   margin-right: 8px;
 }
+
 .section span {
   align-self: center;
   font-size: 16px;
 }
+
 .temp {
   display: none;
 }
+
 /* this is for second setion */
 .showing {
   display: flex;
@@ -54,21 +62,25 @@ body {
   width: 976px;
   margin-top: 26px;
 }
+
 .showing span {
   display: flex;
   justify-content: flex-start;
   width: 50%;
   align-self: center;
 }
+
 .showing .sub {
   width: 50%;
   display: flex;
   justify-content: flex-end;
 }
+
 .sub .mini {
   width: 253px;
   display: flex;
 }
+
 #course {
   outline: 0;
   border-width: 0 0 0.2px;
@@ -77,10 +89,10 @@ body {
   padding-bottom: 0.2rem;
   margin-right: 24px;
   margin-left: 6px;
-
   align-self: flex-start;
   background-color: #eeeeee;
 }
+
 option:not(:checked) {
   background: #fff;
 }
@@ -89,6 +101,7 @@ option:not(:checked) {
   width: 166px;
   height: 20px;
 }
+
 hr {
   width: 976px;
   height: 1px;
@@ -96,13 +109,14 @@ hr {
   opacity: 0.12;
   margin-bottom: 16px;
 }
+
 .center {
   display: grid;
   grid-row-gap: 24px;
-
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
 .block {
   width: 476px;
   height: 246px;
@@ -111,6 +125,7 @@ hr {
   margin-right: auto;
   background: #ffffff 0% 0% no-repeat padding-box;
 }
+
 .about {
   display: flex;
   width: 130px;
@@ -122,17 +137,20 @@ hr {
   justify-content: space-around;
   margin-top: 32px;
 }
+
 .about span {
   font: normal normal medium 14px/18px Quicksand;
   letter-spacing: 0px;
   color: #1f7a54;
 }
+
 .about .vl {
   width: 0px;
   height: 18px;
   border: 1px solid #0000001f;
   background-color: #0000001f;
 }
+
 .footer {
   height: 40px;
   margin-top: 16px;
@@ -142,56 +160,64 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
 .footer .con {
   width: 503.72px;
   height: 26.02px;
   display: flex;
   justify-content: space-evenly;
-
   align-self: center;
 }
+
 .footer .vl {
   width: 0px;
   height: 24px;
   border: 1px solid #0000001f;
 }
+
 .footer span {
   font-size: 12px;
   align-self: center;
 }
+
 .block .head {
   margin-top: 24px;
   margin-left: 24px;
   display: flex;
   margin-bottom: 16px;
 }
+
 .block .con {
   margin-left: 16px;
   margin-right: 16px;
   display: flex;
   flex-direction: column;
-
   width: 288pxpx;
   height: 157px;
 }
+
 .first {
   display: flex;
   width: 288px;
   justify-content: space-between;
 }
+
 .first span {
   font-size: 16px;
   font-weight: bold;
 }
+
 .first img {
   width: 20px;
   height: 24px;
 }
+
 .second {
   margin-top: 7px;
   display: flex;
   width: 265px;
 }
+
 .second .vl {
   width: 0.5px;
   height: 12px;
@@ -201,37 +227,42 @@ hr {
   background-color: #000000;
   align-self: center;
 }
+
 .second span {
   color: #666666;
   font-size: 12px;
 }
+
 .second span:nth-child(4) {
   color: #1f7a54;
   margin-left: 2px;
 }
+
 .third {
   margin-top: 7px;
   font-size: 12px;
   width: 265px;
 }
-.third strong {
-  margin-right: 6px;
-}
+
 .third span {
   margin-right: 8px;
   color: #666666;
 }
+
 .fourth {
   margin-top: 18px;
 }
+
 .fourth select {
   border-width: 0 0 0.2px;
   width: 264px;
   height: 27px;
 }
+
 .fourth option {
   font-size: 16px;
 }
+
 .fifth {
   margin-top: 8px;
   display: flex;
@@ -239,6 +270,7 @@ hr {
   width: 100%;
   width: 265px;
 }
+
 .fifth .vl {
   width: 1px;
   height: 12px;
@@ -248,6 +280,7 @@ hr {
   margin-left: 8px;
   margin-right: 8px;
 }
+
 .foot {
   display: flex;
   border-top: lightgray solid 1px;
@@ -256,12 +289,14 @@ hr {
   margin-left: 24px;
   margin-bottom: 9px;
 }
+
 .foot img:nth-child(1) {
   margin-top: 16px;
   width: 22px;
   height: 24px;
   margin-left: 24px;
 }
+
 .foot img:nth-child(2) {
   margin-left: 101px;
   margin-right: 102px;
@@ -269,11 +304,13 @@ hr {
   width: 18px;
   height: 20px;
 }
+
 .foot img:nth-child(3) {
   margin-top: 18px;
   width: 18px;
   height: 20px;
 }
+
 .foot img:nth-child(4) {
   margin-top: 18px;
   width: 18px;
@@ -281,18 +318,23 @@ hr {
   margin-left: 101px;
   margin-right: 48px;
 }
-// .block:nth-child(2) .fourth {
-//   opacity: 0.5;
-// }
-// .block:nth-child(2) .blur {
-//   opacity: 0.5;
-// }
-// .block:nth-child(3) .blur {
-//   opacity: 0.5;
-// }
-// .block:nth-child(4) .head {
-//   margin-top: 5px;
-// }
+
+.block:nth-child(2) .fourth {
+  opacity: 0.5;
+}
+
+.block:nth-child(2) .blur {
+  opacity: 0.5;
+}
+
+.block:nth-child(3) .blur {
+  opacity: 0.5;
+}
+
+.block:nth-child(4) .head {
+  margin-top: 5px;
+}
+
 .exp {
   width: 52px;
   height: 18px;
@@ -302,20 +344,23 @@ hr {
   text-align: center;
   font-weight: bold;
 }
-/* nav */
 
+/* nav */
 .navbar-brand img {
   width: 134px;
   height: 36px;
 }
+
 .face {
   margin-top: 5px;
   width: 32px;
   height: 32px;
 }
+
 .navbar-nav span {
   color: #3fd28b;
 }
+
 .navbar {
   height: 56px;
 }
@@ -323,15 +368,19 @@ hr {
 .navbar-collapse {
   height: 56px;
 }
+
 .bor {
   border-bottom: 4px solid white;
 }
+
 .navbar-item:nth-child(6) {
   margin-top: 10px;
 }
+
 .navbar-item:nth-child(7) {
   margin-top: 10px;
 }
+
 .badge {
   position: relative;
   top: -41px;
@@ -340,47 +389,58 @@ hr {
   background-color: blue;
   border-radius: 50%;
 }
+
 .bb {
   background-color: #fff;
 }
+
 .navbar-expand-lg .navbar-collapse {
   margin-top: auto;
 }
+
 @media (max-width: 1024px) {
   #course {
     margin-top: 10px;
   }
+
   .main {
     width: 768px;
   }
+
   .top {
     width: 768px;
     height: 56px;
     background-color: aqua;
   }
+
   .center {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
+
   .check {
     width: 720px;
     height: 64px;
   }
+
   .showing {
     width: 720px;
     height: 45px;
   }
+
   hr {
     width: 720px;
     height: 1px;
   }
+
   .footer {
     margin-top: 16px;
     width: 768px;
     height: 40px;
   }
+
   .noncollapse {
     width: 250px;
     justify-content: space-between;
   }
-}
+}/*# sourceMappingURL=dashboard.component.css.map */

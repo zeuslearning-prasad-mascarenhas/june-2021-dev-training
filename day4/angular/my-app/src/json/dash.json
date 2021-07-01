@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Acceleration",
+    "image": "../../assets/quantum_screen_assets/images/imageMask-2.svg",
+    "fav": true,
+    "subjectsection": {
+      "subject": "Physics",
+      "grade": "6",
+      "plus": "+2"
+    },
+    "unitsection": {
+      "istrue": true,
+      "unit": "4",
+      "lesson": "18",
+      "topic": "24"
+    },
+    "dropdown": {
+      "istrue": true,
+      "dropcontent": ["Mr. Frank's Class B", "Mr. Frank's Class C"],
+      "student": "50",
+      "date": "21-Jan-2020 - 21-Aug-2020"
+    },
+    "option": {
+      "image1": true,
+      "image2": true,
+      "image3": true,
+      "image4": true
+    }
+  },
+  {
+    "title": "Displacement, Velocity and Speed",
+    "image": "../../assets/quantum_screen_assets/images/imageMask-2.svg",
+    "fav": true,
+    "subjectsection": {
+      "subject": "Physics 2",
+      "grade": "6",
+      "plus": "+3"
+    },
+    "unitsection": {
+      "istrue": true,
+      "unit": "2",
+      "lesson": "15",
+      "topic": "20"
+    },
+    "dropdown": {
+      "istrue": false,
+      "dropcontent": ["Mr. Frank's Class C"],
+      "student": "",
+      "date": ""
+    },
+    "option": {
+      "image1": true,
+      "image2": false,
+      "image3": false,
+      "image4": true
+    }
+  },
+  {
+    "title": "Introduction to Biology: Micro organisms and how they affec...",
+    "image": "../../assets/quantum_screen_assets/images/imageMask.svg",
+    "fav": true,
+    "subjectsection": {
+      "subject": "Biology",
+      "grade": "4",
+      "plus": "+1"
+    },
+    "unitsection": {
+      "istrue": true,
+      "unit": "5",
+      "lesson": "16",
+      "topic": "22"
+    },
+    "dropdown": {
+      "istrue": true,
+      "dropcontent": ["All Classes", "Mr. Frank's Class C"],
+      "student": "50",
+      "date": ""
+    },
+    "option": {
+      "image1": true,
+      "image2": false,
+      "image3": false,
+      "image4": true
+    }
+  },
+  {
+    "title": "Introduction to High School Mathematics",
+    "image": "../../assets/quantum_screen_assets/images/imageMask-2.svg",
+    "fav": true,
+    "subjectsection": {
+      "subject": "Mathematics",
+      "grade": "8",
+      "plus": "+3"
+    },
+    "unitsection": {
+      "istrue": false,
+      "unit": "",
+      "lesson": "",
+      "topic": ""
+    },
+    "dropdown": {
+      "istrue": true,
+      "dropcontent": ["Mr. Frank's Class A", "Mr. Frank's Class C"],
+      "student": "50",
+      "date": "14-Oct-2019 - 20-Oct-2020"
+    },
+    "option": {
+      "image1": true,
+      "image2": true,
+      "image3": true,
+      "image4": true
+    }
+  }
+]
