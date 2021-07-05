@@ -625,4 +625,12 @@ hr {
     width: 250px;
     justify-content: space-between;
   }
+  .badge {
+    position: relative;
+    top: -41px;
+    right: -15px;
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 50%;
+  }
 }
