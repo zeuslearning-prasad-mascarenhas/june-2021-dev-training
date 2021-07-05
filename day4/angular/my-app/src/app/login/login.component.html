@@ -1,0 +1,61 @@
+<div class="center">
+    <div class="page">
+        <div class="blue"></div>
+        <div class="form">
+            <div class="loginbox">
+                <img src="../../assets/quantum_screen_assets/icons/sort.svg">
+                <h1>Log in with Quantum</h1>
+            </div>
+            <!-- <div class="first">
+                <img src="../../assets/quantum_screen_assets/icons/sort.svg">
+                <h1>Log in with Quantum</h1>
+
+            </div> -->
+            <div class="loginbox">
+                <div class="box">
+                    <input checked type="radio" name="radio1" value="1"><span>District</span>
+                </div>
+                <div class="box">
+                    <input type="radio" name="radio1" value="2"><span>Independent School</span>
+                </div>
+            </div>
+            <div class="loginbox" style="flex-direction: column;">
+                <label>State*</label>
+                <select name="state" id="state">
+                    <option value="volvo">Alabama</option>
+                    <option value="saab">Maharashtra</option>
+
+                </select>
+            </div>
+            <div class="loginbox" style="flex-direction: column;">
+                <label>District*</label>
+                <select name="state" id="state">
+                    <option value="volvo">Alabama School District</option>
+                    <option value="saab">Maharashtra</option>
+
+                </select>
+            </div>
+            <div class="loginbox textbox">
+                <input type="text" required [(ngModel)]='email' placeholder="Username/Email ID*">
+                <label>forgot username</label>
+            </div>
+            <div class="loginbox textbox">
+                <div class="pass">
+                    <input required type="password" [(ngModel)]='pass' placeholder="Password*">
+
+                </div>
+                <label>forgot password</label>
+            </div>
+            <div class="loginbox checkbox">
+                <input type="checkbox" id="remember" name="remember" value="1" style="margin-right :4px">
+                <span>Remember Me</span>
+            </div>
+            <div class="sixth">
+                <input type="submit" value="LOG IN" (click)='registeredUser()'>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

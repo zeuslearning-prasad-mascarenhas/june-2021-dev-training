@@ -71,10 +71,14 @@
             </div>
 
             <div class="foot">
-                <img src="../../assets/quantum_screen_assets/icons/preview.svg">
-                <img src="../../assets/quantum_screen_assets/icons/manage course.svg">
-                <img src="../../assets/quantum_screen_assets/icons/grade submissions.svg">
-                <img src="../../assets/quantum_screen_assets/icons/reports.svg">
+                <img src="../../assets/quantum_screen_assets/icons/preview.svg"
+                    [ngStyle]="{'opacity':data.option.image1===false?'0.5':'1'}">
+                <img src="../../assets/quantum_screen_assets/icons/manage course.svg"
+                    [ngStyle]="{'opacity':data.option.image2===false?'0.5':'1'}">
+                <img src="../../assets/quantum_screen_assets/icons/grade submissions.svg"
+                    [ngStyle]="{'opacity':data.option.image3===false?'0.5':'1'}">
+                <img src="../../assets/quantum_screen_assets/icons/reports.svg"
+                    [ngStyle]="{'opacity':data.option.image4===false?'0.5':'1'}">
             </div>
         </div>
 
