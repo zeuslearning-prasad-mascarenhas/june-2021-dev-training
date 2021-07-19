@@ -333,6 +333,9 @@ hr {
 .navbar-collapse {
   height: 56px;
 }
+.navbar-nav .navbar-item {
+  align-self: center;
+}
 .bor {
   border-bottom: 4px solid white;
 }

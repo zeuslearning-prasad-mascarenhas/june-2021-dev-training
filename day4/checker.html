@@ -142,11 +142,16 @@
             align-self: center;
         }
 
-        .dropdown-content .scrollable {}
+        .dropdown-content .scrollable {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 534px;
+            ;
+        }
 
         .scrollable .alert-content {
             padding-top: 16px;
-            padding-left: 8px;
+            padding-left: 16px;
             padding-right: 8px;
 
             border-bottom: 0.1px solid lightgray;
@@ -192,6 +197,44 @@
             font-size: 12px;
             color: black;
         }
+
+
+        .menuoption {
+            min-height: 48px;
+            padding-left: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-right: 24px;
+            display: flex;
+            flex-direction: column;
+            color: #1F7A54;
+        }
+
+        .menuoption .menumainoption {
+            display: flex;
+        }
+
+        .menuoption .menumainoption span {
+            color: #1F7A54;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .menuoption .menumainoption img {
+            width: 12px;
+            height: 24px;
+            margin-left: auto;
+        }
+
+        .menuoption .menusuboption {
+            min-height: 48px;
+            padding-left: 32px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 14px;
+            display: none;
+            color: #1F7A54;
+        }
     </style>
 </head>
 
@@ -204,12 +247,12 @@
                 <ul class="navbar-nav flex-row noncollapse">
 
                     <!-- Check this part -->
-                    <div class="dropdown" onclick="a.show('alert')">
+                    <div class="dropdown" onmouseover="a.show('alert')" onmouseout="a.hide('alert')">
 
                         <li class="navbar-item" style="height: 50px;">
                             <a href="#" class="nav-link"><img src="quantum_screen_assets/icons/alerts.svg"
                                     class="dropbtn"></a>
-                            <span class="badge badge-light">5</span>
+                            <span class="badge badge-light" id="alertnumber">5</span>
                         </li>
                         <div id="alert" class="dropdown-content">
                             <div id="alertdata" class="scrollable"></div>
@@ -229,7 +272,7 @@
                                     class="dropbtn"></a>
                             <span class="badge badge-light">5</span>
                         </li>
-                        <div id="notify" name="a" class="dropdown-content">
+                        <div id="notify" class="dropdown-content">
                             <div class="scroll">
                                 <div class="cards">
                                     <div class="name">
@@ -317,10 +360,29 @@
                         <a href="#" class="nav-link"><img src="img/face.png" class="face"></a>
                         <span class="badge badge-light bb">5</span>
                     </li>
-                    <button style="align-self: baseline;" class="navbar-toggler" data-toggle="collapse"
-                        data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="dropdown" onmouseover="a.show('navdrop')" onmouseout="a.hide('navdrop')">
+                        <button style="align-self: baseline;margin-bottom: 8px;" class="navbar-toggler">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="navdrop" class="dropdown-content">
+                            <div class="navdropcontent">
+                                <div class="menuoption"><span>Dashboard</span></div>
+                                <div class="menuoption">
+                                    <div class="menumainoption"><span>Content</span><img src="img/down.png"
+                                            onclick="opensuboption('coursesub')"></div>
+                                    <div id="coursesub" class="menusuboption">
+                                        <span> COURSE CATALOG</span>
+                                    </div>
+                                </div>
+                                <div class="menuoption"><span>Users</span></div>
+                                <div class="menuoption"><span>Report</span></div>
+                                <div class="menuoption"><span>Admin</span></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </ul>
 
             </div>
@@ -358,6 +420,31 @@
             }
         }
     </script>
+    <!-- for click logic -->
+    <script type="text/javascript">
+        let opennav = () => {
+            if (document.getElementById("navdrop").style.visibility !== 'visible') {
+                document.getElementById("navdrop").style.visibility = 'visible';
+            } else {
+                document.getElementById("navdrop").style.visibility = 'hidden';
+            }
+
+        }
+    </script>
+    <!-- this is for navsuboption -->
+    <script>
+        let opensuboption = (elem) => {
+            if (document.getElementById(elem).style.display !== 'block') {
+                document.getElementById(elem).style.display = 'block';
+                document.getElementById(elem).parentElement.style.cssText = "padding-bottom:0;background-color:#F3F3F3"
+
+            } else {
+                document.getElementById(elem).style.display = 'none';
+                document.getElementById(elem).parentElement.style.cssText = "padding-bottom:16px;background-color:inherit"
+            }
+        }
+    </script>
+    <!-- this is for json render -->
     <script>
         fetch("json/alert.json").then(function (response) {
             return response.json()
@@ -367,6 +454,8 @@
             console.log(`error + ${err}`)
         })
         function appendData(data) {
+            let number = document.getElementById("alertnumber")
+            number.innerText = data.length
             let mainContainer = document.getElementById("alertdata");
             for (let i = 0; i < data.length; i++) {
                 let div = document.createElement("div");
