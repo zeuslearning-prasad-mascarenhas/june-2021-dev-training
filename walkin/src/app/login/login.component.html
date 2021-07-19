@@ -1,0 +1,26 @@
+<form #loginForm="ngForm" class="login">
+    <div class="title login-box">Log in</div>
+    <div class="email login-box">
+        <input type="email" placeholder="Email ID*" ngModel>
+        <label>FORGOT email id?</label>
+    </div>
+    <div class="password email login-box">
+        <div class="password-content">
+            <input type="password" placeholder="Password*" ngModel>
+            <!-- <button></button> -->
+        </div>
+
+        <label>FORGOT PASSWORD?</label>
+    </div>
+    <div class="remember-me login-box">
+        <input type="checkbox" ngModel>
+        <strong>Remember Me</strong>
+    </div>
+    <div class="login-button login-box">
+        <input type="submit" name="LOG IN">
+    </div>
+    <div class="not-register login-box">
+        <label>Not registered yet?</label>
+        <strong>create an account</strong>
+    </div>
+</form>

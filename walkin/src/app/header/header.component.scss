@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  height: 57px;
+  background-color: #1f2834;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+header {
+  img {
+    width: 121px;
+    height: 36px;
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .userlogo {
+    align-self: center;
+    width: 40px;
+    margin-left: auto;
+    height: 40px;
+    color: white;
+    background-color: #3c4e62;
+    border: 2px solid #3fd28b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    span {
+      align-self: center;
+    }
+  }
+}

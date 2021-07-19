@@ -1,0 +1,53 @@
+<div class="premain">
+    <div class="head">
+        <strong>Pre-requisites & Application Process</strong>
+        <div class="switch">
+            <div class="line">
+            </div>
+            <img src="../../assets/img/{{src}}" (click)="checker()">
+        </div>
+    </div>
+    <div class="content" *ngIf="check">
+        <div class="genins box">
+            <div class="title">
+                General Instructions :
+            </div>
+            <div class="descrip">
+                <strong *ngFor="let x of predata.generalins">- {{x}} </strong>
+            </div>
+        </div>
+        <div class="line box"></div>
+        <div class="examins box">
+            <div class="title">
+                Instructions for the Exam :
+            </div>
+            <div class="descrip">
+                <strong *ngFor="let x of predata.examins">- {{x}} </strong>
+            </div>
+        </div>
+        <div class="line box"></div>
+        <div class="sysins box">
+            <div class="title">
+                Minimum System Requirements :
+            </div>
+            <div class="descrip">
+                <strong *ngFor="let x of predata.sysins">- {{x}} </strong>
+            </div>
+        </div>
+        <div class="line box"></div>
+        <div class="process box">
+            <div class="title">
+                Process :
+            </div>
+            <div class="descrip">
+                <strong>- Every round is an elimination round. Candidates need to clear all rounds to get
+                    selected.</strong>
+                <div class="rounds" *ngFor="let x of predata.process">
+                    <strong>{{x.round}}</strong>
+                    <strong>{{x.name}}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+<div class="rolemain" *ngFor="let item of roledata;let i = index">
+    <div class="head">
+        <strong>{{item.title}}</strong>
+        <div class="switch">
+            <div class="line">
+            </div>
+            <img [src]="check===i?'../../assets/img/expand_less_black_24dp.svg':'../../assets/img/expand_more_black_24dp.svg'"
+                (click)="checker(i)">
+        </div>
+    </div>
+    <div class="content" id="{{i}}" *ngIf="check===i">
+        <div class="package box">
+            <div class="title">
+                gross compensation package :
+            </div>
+            <div class="descrip">
+                <strong>{{item.package}}</strong>
+            </div>
+        </div>
+        <div class="line box"></div>
+        <div class="role box">
+            <div class="title">
+                Role Description :
+            </div>
+            <div class="descrip">
+                <strong *ngFor="let x of item. roledesription">- {{x}} </strong>
+            </div>
+        </div>
+        <div class="line box"></div>
+        <div class="requirement box">
+            <div class="title">
+                Requirements :
+            </div>
+            <div class="descrip">
+                <strong *ngFor="let y of item.requirment">- {{y}} </strong>
+            </div>
+        </div>
+    </div>
+
+</div>

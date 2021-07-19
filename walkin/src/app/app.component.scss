@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  app-login {
+    height: 100vh;
+    margin-top: 200px;
+    margin-bottom: auto;
+    align-self: center;
+  }
+}

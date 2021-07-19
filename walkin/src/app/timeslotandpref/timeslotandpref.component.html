@@ -1,0 +1,27 @@
+<div class="timeslotmain">
+    <div class="title timecontent">Time Slots & Preferences</div>
+    <div class="slots timecontent">
+        <div class="heading">Select a Time Slot :</div>
+        <div class="slot" *ngFor="let item of timeandslot.time">
+            <input type="radio" name="time" value="{{item}}">
+            <strong>{{item}}</strong>
+        </div>
+    </div>
+    <div class="line timecontent"></div>
+    <div class="slots timecontent">
+        <div class="heading">Select Your Preference :</div>
+        <div class="slot" *ngFor="let item of timeandslot.preference">
+            <input type="checkbox" name="pref" value="{{item}}">
+            <strong>{{item}}</strong>
+        </div>
+    </div>
+    <div class="line timecontent"></div>
+    <div class="resume timecontent">
+        <img src="../../assets/img/Upload_black_24dp.svg">
+        <strong>Upload Updated Resume</strong>
+        <div class="back">
+            <img src="../../assets/img/arrow_upward_black_24dp.svg">
+        </div>
+
+    </div>
+</div>
